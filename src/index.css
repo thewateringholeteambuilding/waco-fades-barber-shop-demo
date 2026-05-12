@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: hsl(45 20% 94%);
+  --color-surface: hsl(45 15% 90%);
+  --color-fg: hsl(0 0% 8%);
+  --color-accent: hsl(0 80% 52%);
+  --color-muted: hsl(45 5% 55%);
+  --color-border: hsl(0 0% 8%);
+
+  --shadow-brutal: 4px 4px 0px hsl(0 0% 8%);
+  --shadow-brutal-lg: 6px 6px 0px hsl(0 0% 8%);
+  --shadow-brutal-accent: 4px 4px 0px hsl(0 80% 52%);
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: hsl(0 80% 52%);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
